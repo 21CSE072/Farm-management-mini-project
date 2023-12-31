@@ -1,0 +1,46 @@
+
+
+
+<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+
+<label>product name is paddy:</label>
+
+<label>productid is 101:</label>
+
+
+<label> Enter your name:</label>
+<input type="text" name="customer">
+
+
+<label>Enter Email:</label>
+<input type="email" name="email">
+
+<label>Enter phone number:</label>
+<input type="telephone" name="phone">
+
+<label>select the quantity:  </label>
+                <select id="products" name="products" >
+                    <option value="select the quantity">select the quantity</option>
+                    <option value="one">(1)100rs</option>
+                    <option value="two">(2)200rs</option>
+                    <option value="three">(3)300rs</option>
+                    <option value="four">(4)400rs</option>
+                </select>
+
+<input type="submit" value="buy" name="submitbuy">
+</form>
+
+
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$conn = new mysqli($servername, $username, $password);
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+echo "<br> <br>";
+
+?>
